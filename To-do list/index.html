@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>to do list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="todo-container">
+    <header>
+      <h1>To-do list</h1>
+      <button id="dark-mode-toggle">🌗</button>
+    </header>
+    
+    <div id="todo-form">
+      <input type="text" id="input-box" placeholder="tambahkan tugas... "/>
+      <select id="category">
+        <option value="work">work</option>
+        <option value="personal">personal</option>
+        <option value="study">study</option>
+        <input type="color" id="color-picker" value="#ff9800" />
+        <button id="input-button" onclick="addTask()">tambahkan</button>
+      </select>
+    </div>
+    
+    <div id="filter-section">
+      <label for="filter">filter</label>
+      <select id="filter">
+        <option value="all">semua</option>
+        <option value="work">work</option>
+        <option value="personal">personal</option>
+        <option value="study">study</option>
+      </select>
+      <button id="clear-all">hapus semua</button>
+    </div>
+    
+    <h2>daftar tugas</h2>
+    <ul id="list-container"></ul>
+    <div class="counter-countainer">
+      Selesai= <span id="completed-counter">0</span>
+      Belum-selesai= <span id="uncompleted-counter">0</span>
+    </div>
+  </div>
+  <footer>
+    <p>&copy;<small>Copyright, right?</small></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
